@@ -1,6 +1,7 @@
 # threading-with-kill
 if you using wheli and not make some paramter for stop the loop. your thread will running forever, if not stop the program.
 
+so you can make t1.kill(). so you can stop the thread out of loop
 #for example
 
 
