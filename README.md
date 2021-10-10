@@ -4,14 +4,17 @@ if you using wheli and not make some paramter for stop the loop. your thread wil
 #for example
 
 
-def RuinsAnimated():
-    for c in itertools.cycle(["ᛞ","ᚫ","ᛉ","ᚵ","ᛒ","ᛍ","ᛣ","ᛤ","ᛄ"]):
-        sys.stdout.write('\r' + c)
-        sys.stdout.flush()
-        time.sleep(0.1)
+    import sys, itertools, time
+    from AlipThreading import*
 
-t1 = thread_with_trace(target=RuinsAnimated)
-t1.start()
-time.sleep(5)
-t1.kill()
-t1.join()
+    def RuinsAnimated():
+        for c in itertools.cycle(["ᛞ","ᚫ","ᛉ","ᚵ","ᛒ","ᛍ","ᛣ","ᛤ","ᛄ"]):
+            sys.stdout.write('\r' + c)
+            sys.stdout.flush()
+            time.sleep(0.1)
+
+    t1 = thread_with_trace(target=RuinsAnimated)
+    t1.start()
+    time.sleep(5)
+    t1.kill()
+    t1.join()
