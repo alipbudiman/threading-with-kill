@@ -3,8 +3,6 @@ if you using wheli and not make some paramter for stop the loop. your thread wil
 
 #for example
 
-import sys, itertools, time
-from AlipThreading import*
 
 def RuinsAnimated():
     for c in itertools.cycle(["ᛞ","ᚫ","ᛉ","ᚵ","ᛒ","ᛍ","ᛣ","ᛤ","ᛄ"]):
